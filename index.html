@@ -7,11 +7,23 @@
     <title>Profesional de Yoga</title>
     <style>
         :root {
-            --primary-color: #2b6777;
-            --secondary-color: #c8d8e4;
-            --accent-color: #52ab98;
-            --text-color: #2b2b2b;
-            --bg-color: #f2f2f2;
+            /* Paleta original */
+            --deep-teal: #638475;
+            --light-green: #90e39a;
+            --lime-cream: #ddf093;
+            --desert-sand: #f6d0b1;
+            --magenta-bloom: #ce4760;
+
+            /* Uso funcional en el sitio */
+            --primary-color: var(--deep-teal);
+            --secondary-color: var(--light-green);
+            --accent-color: var(--magenta-bloom);
+            --text-color: #333333;
+            --bg-color: var(--desert-sand);
+        }
+
+        html {
+            scroll-behavior: smooth;
         }
 
         body {
@@ -21,6 +33,39 @@
             margin: 0;
             padding: 0;
             line-height: 1.6;
+        }
+
+        nav {
+            background-color: var(--primary-color);
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1rem;
+            font-size: 1.1rem;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--secondary-color);
+        }
+
+        .section-title {
+            text-align: center;
+            color: var(--primary-color);
+            font-size: 2.5rem;
+            margin-top: 4rem;
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
         }
 
         header {
@@ -39,7 +84,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(135deg, rgba(82, 171, 152, 0.4) 0%, rgba(43, 103, 119, 0.8) 100%);
+            background: linear-gradient(135deg, rgba(206, 71, 96, 0.6) 0%, rgba(99, 132, 117, 0.9) 100%);
             z-index: 1;
         }
 
@@ -134,6 +179,12 @@
 
 <body>
 
+    <nav>
+        <a href="#educacion">Educación</a>
+        <a href="#experiencia">Experiencia</a>
+        <a href="#ahora">Ahora</a>
+    </nav>
+
     <header>
         <div class="content animate">
             <h1>Namasté</h1>
@@ -142,15 +193,30 @@
     </header>
 
     <div class="container">
-        <div class="card animate" style="animation-delay: 0.2s;">
-            <p>Soy un profesional apasionado por el bienestar integral y el equilibrio entre cuerpo, mente y espíritu.
-            </p>
-            <p>Me gradué con honores en la <span class="university">Universidad del Súper Yoga de la India</span>, donde
-                aprendí de los grandes maestros y perfeccioné técnicas ancestrales.</p>
+        
+        <h2 id="educacion" class="section-title animate">Educación</h2>
+        <div class="card animate" style="animation-delay: 0.2s; text-align: left;">
+            <p style="text-align: center; margin-bottom: 2rem;">Mi formación académica y espiritual ha sido un viaje multidisciplinario y fascinante:</p>
+            <ul style="list-style-type: none; padding: 0;">
+                <li style="margin-bottom: 1rem; padding: 1rem; background-color: var(--bg-color); border-left: 4px solid var(--accent-color); border-radius: 0 8px 8px 0;">
+                    <strong>🎓 Pregrado</strong> en la Universidad de los Muppets
+                </li>
+                <li style="margin-bottom: 1rem; padding: 1rem; background-color: var(--bg-color); border-left: 4px solid var(--accent-color); border-radius: 0 8px 8px 0;">
+                    <strong>🍪 Maestría</strong> en Comegalletas
+                </li>
+                <li style="margin-bottom: 1rem; padding: 1rem; background-color: var(--bg-color); border-left: 4px solid var(--accent-color); border-radius: 0 8px 8px 0;">
+                    <strong>🎭 Cursos adicionales</strong> en Titerología
+                </li>
+                <li style="margin-bottom: 1rem; padding: 1rem; background-color: var(--bg-color); border-left: 4px solid var(--accent-color); border-radius: 0 8px 8px 0;">
+                    <strong>📱 Diplomado</strong> en Redes Sociales
+                </li>
+                <li style="padding: 1rem; background-color: var(--bg-color); border-left: 4px solid var(--primary-color); border-radius: 0 8px 8px 0;">
+                    <strong>🧘‍♂️ Curso Integral de Yoga</strong> en la <span class="university">Súper Universidad de Yoga de la India</span>
+                </li>
+            </ul>
         </div>
 
-        <h2 style="text-align: center; color: var(--primary-color);">Mis Especialidades</h2>
-
+        <h2 id="experiencia" class="section-title animate">Experiencia</h2>
         <div class="features">
             <div class="feature-box animate" style="animation-delay: 0.4s;">
                 <h3>Hatha Yoga</h3>
@@ -165,6 +231,13 @@
                 <p>Acompañamiento personalizado para integrar la filosofía del yoga en tu vida diaria.</p>
             </div>
         </div>
+
+        <h2 id="ahora" class="section-title animate">Ahora</h2>
+        <div class="card animate" style="animation-delay: 1s;">
+            <p>Actualmente me dedico a expandir el conocimiento del ser a través de clases personalizadas y retiros de bienestar.</p>
+            <p>Mi propósito principal hoy en día es guiar a mis alumnos hacia una vida más consciente, plena y en total armonía con el universo.</p>
+        </div>
+
     </div>
 
     <footer>
